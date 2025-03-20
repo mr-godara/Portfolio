@@ -226,7 +226,7 @@ const Hero = () => {
               <div className="aspect-square rounded-full bg-gradient-to-br from-blue-500 to-purple-600 dark:from-blue-400 dark:to-purple-400 opacity-20 absolute inset-0 animate-pulse" />
               <div className="overflow-hidden rounded-full w-full aspect-square">
                 <img
-                  src="/src/Profile.jpg"
+                  src="https://res.cloudinary.com/du0tarfxr/image/upload/v1742476226/Profile_e2hakb.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover relative z-10 shadow-2xl"
                 />
