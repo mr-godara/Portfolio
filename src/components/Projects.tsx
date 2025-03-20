@@ -9,7 +9,7 @@ const Projects = () => {
     {
       title: "Trendy Fashion",
       description: "Discover the full-stack fashion ecommerce platform that blends design, functionality, and payment processing for a shopping experience.",
-      image: "src/Trendy_Fashion.png",
+      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742476174/Trendy_Fashion_gzmydd.png",
       tech: ["React", "Node.js", "MongoDB", "Express.js", "Typescript", "HTML5", "Tailwind CSS"],
       github: "https://github.com/mr-godara/Trendy-Fashion",
       live: "https://trendy-fashion-dun.vercel.app/"
@@ -17,18 +17,18 @@ const Projects = () => {
     {
       title: "Contest Tracker",
       description: "Contest Tracker aggregates coding contests, provides YouTube solutions, and allows bookmarking for easy access!",
-      image: "src/Contest_Tracker.png",
+      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742476159/Contest_Tracker_aspxdb.png",
       tech: ["Typescript", "HTML5", "Tailwind CSS", "API Integration"],
       github: "https://github.com/mr-godara/Contest_Tracker",
       live: "https://contest-tracker-dusky.vercel.app/"
     },
     {
-      title: "Portfolio website",
+      title: "Portfolio Website",
       description: "Built a modern portfolio website to showcase my projects, skills, and experience with a responsive and interactive design!",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742477299/Portfolio_dzmwbb.png",
       tech: ["React.js", "Typescript", "HTML5", "Tailwind CSS"],
       github: "https://github.com/mr-godara/Portfolio",
-      live: "https://example.com"
+      live: "https://portfolio-mu-lyart-45.vercel.app/"
     }
   ];
 
