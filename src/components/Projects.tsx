@@ -23,12 +23,12 @@ const Projects = () => {
       live: "https://contest-tracker-dusky.vercel.app/"
     },
     {
-      title: "Portfolio website",
+      title: "Portfolio Website",
       description: "Built a modern portfolio website to showcase my projects, skills, and experience with a responsive and interactive design!",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742477299/Portfolio_dzmwbb.png",
       tech: ["React.js", "Typescript", "HTML5", "Tailwind CSS"],
       github: "https://github.com/mr-godara/Portfolio",
-      live: "https://example.com"
+      live: "https://portfolio-mu-lyart-45.vercel.app/"
     }
   ];
 
