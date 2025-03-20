@@ -9,7 +9,7 @@ const Projects = () => {
     {
       title: "Trendy Fashion",
       description: "Discover the full-stack fashion ecommerce platform that blends design, functionality, and payment processing for a shopping experience.",
-      image: "src/Trendy_Fashion.png",
+      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742476174/Trendy_Fashion_gzmydd.png",
       tech: ["React", "Node.js", "MongoDB", "Express.js", "Typescript", "HTML5", "Tailwind CSS"],
       github: "https://github.com/mr-godara/Trendy-Fashion",
       live: "https://trendy-fashion-dun.vercel.app/"
@@ -17,7 +17,7 @@ const Projects = () => {
     {
       title: "Contest Tracker",
       description: "Contest Tracker aggregates coding contests, provides YouTube solutions, and allows bookmarking for easy access!",
-      image: "src/Contest_Tracker.png",
+      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742476159/Contest_Tracker_aspxdb.png",
       tech: ["Typescript", "HTML5", "Tailwind CSS", "API Integration"],
       github: "https://github.com/mr-godara/Contest_Tracker",
       live: "https://contest-tracker-dusky.vercel.app/"
