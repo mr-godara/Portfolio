@@ -6,6 +6,7 @@ import Tilt from 'react-parallax-tilt';
 
 const Projects = () => {
   const projects = [
+<<<<<<< HEAD
   {
     title: "EchoPrep",
     description: "An AI-powered mock interview platform that generates questions and evaluates answers with real-time feedback.",
@@ -56,6 +57,41 @@ const Projects = () => {
   }
 ];
 
+=======
+    {
+      title: "Trendy Fashion",
+      description: "Discover the full-stack fashion ecommerce platform that blends design, functionality, and payment processing for a shopping experience.",
+      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742476174/Trendy_Fashion_gzmydd.png",
+      tech: ["React", "Node.js", "MongoDB", "Express.js", "Typescript", "HTML5", "Tailwind CSS"],
+      github: "https://github.com/mr-godara/Trendy-Fashion",
+      live: "https://trendy-fashion-dun.vercel.app/"
+    },
+    {
+      title: "Contest Tracker",
+      description: "Contest Tracker aggregates coding contests, provides YouTube solutions, and allows bookmarking for easy access!",
+      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742476159/Contest_Tracker_aspxdb.png",
+      tech: ["Typescript", "HTML5", "Tailwind CSS", "API Integration"],
+      github: "https://github.com/mr-godara/Contest_Tracker",
+      live: "https://contest-tracker-dusky.vercel.app/"
+    },
+    {
+      title: "Echoprep",
+      description: "EchoPrep is a full-stack mock-interview platform that delivers real-time video sessions, role-based access, and integrated feedback tools to help candidates practice and excel!",
+      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1750833371/Screenshot_2025-06-25_111215_g0vcuk.png",
+      tech: ["React.js", "Typescript", "HTML5", "Tailwind CSS","Express.js","MongoDB","GeminiAI"],
+      github: "https://github.com/mr-godara/EchoPrep",
+      live: "https://echo-prep-nine.vercel.app/"
+    },
+    {
+      title: "Portfolio Website",
+      description: "Built a modern portfolio website to showcase my projects, skills, and experience with a responsive and interactive design!",
+      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742477299/Portfolio_dzmwbb.png",
+      tech: ["React.js", "Typescript", "HTML5", "Tailwind CSS"],
+      github: "https://github.com/mr-godara/Portfolio",
+      live: "https://portfolio-mu-lyart-45.vercel.app/"
+    }
+  ];
+>>>>>>> b3ceb4f (chore: add Profile.jpg and update Projects component)
 
   const [ref, inView] = useInView({
     triggerOnce: true,
