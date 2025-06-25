@@ -23,6 +23,14 @@ const Projects = () => {
       live: "https://contest-tracker-dusky.vercel.app/"
     },
     {
+      title: "Echoprep",
+      description: "EchoPrep is a full-stack mock-interview platform that delivers real-time video sessions, role-based access, and integrated feedback tools to help candidates practice and excel!",
+      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1750833371/Screenshot_2025-06-25_111215_g0vcuk.png",
+      tech: ["React.js", "Typescript", "HTML5", "Tailwind CSS","Express.js","MongoDB","GeminiAI"],
+      github: "https://github.com/mr-godara/EchoPrep",
+      live: "https://echo-prep-nine.vercel.app/"
+    },
+    {
       title: "Portfolio Website",
       description: "Built a modern portfolio website to showcase my projects, skills, and experience with a responsive and interactive design!",
       image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742477299/Portfolio_dzmwbb.png",
