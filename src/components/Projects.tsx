@@ -6,58 +6,6 @@ import Tilt from 'react-parallax-tilt';
 
 const Projects = () => {
   const projects = [
-<<<<<<< HEAD
-  {
-    title: "EchoPrep",
-    description: "An AI-powered mock interview platform that generates questions and evaluates answers with real-time feedback.",
-    image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1750833371/Screenshot_2025-06-25_111215_g0vcuk.png",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "JWT", "Gemini API"],
-    github: "https://github.com/mr-godara/EchoPrep",
-    live: "https://echo-prep-nine.vercel.app/"
-  },
-  {
-    title: "Medibot",
-    description: "An AI healthcare assistant using RAG to answer medical queries from uploaded documents with contextual accuracy.",
-    image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1767156488/Screenshot_2025-12-31_101317_bqr3ii.png",
-    tech: ["Python", "Flask", "LangChain", "Pinecone", "AWS", "RAG", "GenAI"],
-    github: "https://github.com/mr-godara/Medibot",
-    live: "https://medibot-7cqk.vercel.app/"
-  },
-  {
-    title: "CodeGen.ai",
-    description: "A minimal full-stack app for AI-based code generation with syntax highlighting and paginated history.",
-    image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1767156449/Screenshot_2025-12-31_101650_gh7whc.png",
-    tech: ["React.js", "Node.js", "Express.js", "PostgreSQL", "REST APIs", "Gemini API"],
-    github: "https://github.com/mr-godara/Code-Copilot",
-    live: "https://code-copilot-rouge.vercel.app/"
-  },
-  {
-    title: "Trendy Fashion",
-    description: "A full-stack fashion e-commerce platform with modern UI, secure authentication, and scalable backend.",
-    image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742476174/Trendy_Fashion_gzmydd.png",
-    tech: ["React", "Node.js", "MongoDB", "Express.js", "Typescript", "HTML5", "Tailwind CSS"],
-    github: "https://github.com/mr-godara/Trendy-Fashion",
-    live: "https://trendy-fashion-dun.vercel.app/"
-  },
-  {
-    title: "Contest Tracker",
-    description: "Aggregates coding contests, links solution videos, and supports bookmarking for easy tracking.",
-    image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742476159/Contest_Tracker_aspxdb.png",
-    tech: ["Typescript", "HTML5", "Tailwind CSS", "API Integration"],
-    github: "https://github.com/mr-godara/Contest_Tracker",
-    live: "https://contest-tracker-dusky.vercel.app/"
-  },
-  {
-    title: "Portfolio Website",
-    description: "A responsive personal portfolio showcasing projects, skills, and experience.",
-    image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742477299/Portfolio_dzmwbb.png",
-    tech: ["React.js", "Typescript", "HTML5", "Tailwind CSS"],
-    github: "https://github.com/mr-godara/Portfolio",
-    live: "https://portfolio-mu-lyart-45.vercel.app/"
-  }
-];
-
-=======
     {
       title: "Trendy Fashion",
       description: "Discover the full-stack fashion ecommerce platform that blends design, functionality, and payment processing for a shopping experience.",
@@ -91,7 +39,6 @@ const Projects = () => {
       live: "https://portfolio-mu-lyart-45.vercel.app/"
     }
   ];
->>>>>>> b3ceb4f (chore: add Profile.jpg and update Projects component)
 
   const [ref, inView] = useInView({
     triggerOnce: true,
