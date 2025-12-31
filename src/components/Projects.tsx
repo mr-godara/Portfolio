@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, Github } from 'lucide-react';
@@ -6,39 +6,55 @@ import Tilt from 'react-parallax-tilt';
 
 const Projects = () => {
   const projects = [
-    {
-      title: "Trendy Fashion",
-      description: "Discover the full-stack fashion ecommerce platform that blends design, functionality, and payment processing for a shopping experience.",
-      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742476174/Trendy_Fashion_gzmydd.png",
-      tech: ["React", "Node.js", "MongoDB", "Express.js", "Typescript", "HTML5", "Tailwind CSS"],
-      github: "https://github.com/mr-godara/Trendy-Fashion",
-      live: "https://trendy-fashion-dun.vercel.app/"
-    },
-    {
-      title: "Contest Tracker",
-      description: "Contest Tracker aggregates coding contests, provides YouTube solutions, and allows bookmarking for easy access!",
-      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742476159/Contest_Tracker_aspxdb.png",
-      tech: ["Typescript", "HTML5", "Tailwind CSS", "API Integration"],
-      github: "https://github.com/mr-godara/Contest_Tracker",
-      live: "https://contest-tracker-dusky.vercel.app/"
-    },
-    {
-      title: "Echoprep",
-      description: "EchoPrep is a full-stack mock-interview platform that delivers real-time video sessions, role-based access, and integrated feedback tools to help candidates practice and excel!",
-      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1750833371/Screenshot_2025-06-25_111215_g0vcuk.png",
-      tech: ["React.js", "Typescript", "HTML5", "Tailwind CSS","Express.js","MongoDB","GeminiAI"],
-      github: "https://github.com/mr-godara/EchoPrep",
-      live: "https://echo-prep-nine.vercel.app/"
-    },
-    {
-      title: "Portfolio Website",
-      description: "Built a modern portfolio website to showcase my projects, skills, and experience with a responsive and interactive design!",
-      image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742477299/Portfolio_dzmwbb.png",
-      tech: ["React.js", "Typescript", "HTML5", "Tailwind CSS"],
-      github: "https://github.com/mr-godara/Portfolio",
-      live: "https://portfolio-mu-lyart-45.vercel.app/"
-    }
-  ];
+  {
+    title: "EchoPrep",
+    description: "An AI-powered mock interview platform that generates questions and evaluates answers with real-time feedback.",
+    image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1750833371/Screenshot_2025-06-25_111215_g0vcuk.png",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "JWT", "Gemini API"],
+    github: "https://github.com/mr-godara/EchoPrep",
+    live: "https://echo-prep-nine.vercel.app/"
+  },
+  {
+    title: "Medibot",
+    description: "An AI healthcare assistant using RAG to answer medical queries from uploaded documents with contextual accuracy.",
+    image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1767156488/Screenshot_2025-12-31_101317_bqr3ii.png",
+    tech: ["Python", "Flask", "LangChain", "Pinecone", "AWS", "RAG", "GenAI"],
+    github: "https://github.com/mr-godara/Medibot",
+    live: "https://medibot-7cqk.vercel.app/"
+  },
+  {
+    title: "CodeGen.ai",
+    description: "A minimal full-stack app for AI-based code generation with syntax highlighting and paginated history.",
+    image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1767156449/Screenshot_2025-12-31_101650_gh7whc.png",
+    tech: ["React.js", "Node.js", "Express.js", "PostgreSQL", "REST APIs", "Gemini API"],
+    github: "https://github.com/mr-godara/Code-Copilot",
+    live: "https://code-copilot-rouge.vercel.app/"
+  },
+  {
+    title: "Trendy Fashion",
+    description: "A full-stack fashion e-commerce platform with modern UI, secure authentication, and scalable backend.",
+    image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742476174/Trendy_Fashion_gzmydd.png",
+    tech: ["React", "Node.js", "MongoDB", "Express.js", "Typescript", "HTML5", "Tailwind CSS"],
+    github: "https://github.com/mr-godara/Trendy-Fashion",
+    live: "https://trendy-fashion-dun.vercel.app/"
+  },
+  {
+    title: "Contest Tracker",
+    description: "Aggregates coding contests, links solution videos, and supports bookmarking for easy tracking.",
+    image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742476159/Contest_Tracker_aspxdb.png",
+    tech: ["Typescript", "HTML5", "Tailwind CSS", "API Integration"],
+    github: "https://github.com/mr-godara/Contest_Tracker",
+    live: "https://contest-tracker-dusky.vercel.app/"
+  },
+  {
+    title: "Portfolio Website",
+    description: "A responsive personal portfolio showcasing projects, skills, and experience.",
+    image: "https://res.cloudinary.com/du0tarfxr/image/upload/v1742477299/Portfolio_dzmwbb.png",
+    tech: ["React.js", "Typescript", "HTML5", "Tailwind CSS"],
+    github: "https://github.com/mr-godara/Portfolio",
+    live: "https://portfolio-mu-lyart-45.vercel.app/"
+  }
+];
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -114,7 +130,7 @@ const Projects = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />
           ))}
@@ -130,6 +146,13 @@ const ProjectCard = ({ project, index }) => {
     threshold: 0.1
   });
 
+  const [isExpanded, setIsExpanded] = useState(false);
+  const maxLength = 100;
+  const shouldTruncate = project.description.length > maxLength;
+  const displayDescription = isExpanded || !shouldTruncate 
+    ? project.description 
+    : `${project.description.substring(0, maxLength)}...`;
+
   return (
     <Tilt
       tiltMaxAngleX={8}
@@ -142,7 +165,7 @@ const ProjectCard = ({ project, index }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: index * 0.1 }}
-        className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 relative group"
+        className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 relative group h-full flex flex-col"
       >
         <div className="relative overflow-hidden">
           <motion.img
@@ -159,13 +182,24 @@ const ProjectCard = ({ project, index }) => {
           />
         </div>
         <motion.div 
-          className="p-6"
+          className="p-6 flex-1 flex flex-col"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.2 }}
         >
           <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{project.title}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-2 flex-1">
+            {displayDescription}
+          </p>
+          {shouldTruncate && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-blue-600 dark:text-blue-400 hover:underline text-sm mb-2 font-medium text-left"
+            >
+              {isExpanded ? 'See less' : 'See more'}
+            </button>
+          )}
+          {!shouldTruncate && <div className="mb-7"></div>}
           <div className="flex flex-wrap gap-2 mb-4">
             {project.tech.map((tech, i) => (
               <motion.span
