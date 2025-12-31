@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Rocket, Zap, Download, Mail, Github, Linkedin } from 'lucide-react';
 import Tilt from 'react-parallax-tilt';
+import profileImage from '../Profile.jpg';
 
 const Hero = () => {
   const [displayedText, setDisplayedText] = useState('');
@@ -237,7 +238,7 @@ const Hero = () => {
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.8 }}
-                    src="/src/Profile.jpg"
+                    src={profileImage}
                     alt="Amit Godara"
                     className="w-full h-full object-cover"
                   />
