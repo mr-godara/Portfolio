@@ -34,6 +34,18 @@ const Hero = () => {
       title: "Featured Projects",
       content: (
         <div className="grid gap-6">
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+            <h3 className="font-semibold mb-2">EchoPrep</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Your practice "echoes" in the real interview!</p>
+          </div>
+          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+            <h3 className="font-semibold mb-2">Medibot</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Medibot is an AI-based healthcare chatbot that answers medical queries using document-aware RAG!</p>
+          </div>
+          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+            <h3 className="font-semibold mb-2">CodeGen.ai</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">A minimal full-stack app for AI-based code generation with syntax highlighting and paginated history!</p>
+          </div>
           <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
             <h3 className="font-semibold mb-2">Trendy Fashion</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">Discover the full-stack fashion ecommerce platform that blends design, functionality, and payment processing for a shopping experience.</p>
